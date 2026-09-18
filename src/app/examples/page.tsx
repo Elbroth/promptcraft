@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export default function ExamplesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<string | null>(null);
 
   const filteredItems = GALLERY_ITEMS.filter((item) => {
     const matchesCategory =
@@ -69,7 +69,7 @@ export default function ExamplesPage() {
         {/* Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {filteredItems.map((item, index) => (
+          {filteredItems.map((item) => (
               <motion.div
                 key={item.title}
                 layout
@@ -103,7 +103,7 @@ export default function ExamplesPage() {
                     <button
                       onClick={() =>
                         setExpandedIndex(
-                          expandedIndex === index ? null : index
+                          expandedIndex === item.title ? null : item.title
                         )
                       }
                       className="flex items-center gap-1 text-xs text-white/60 hover:text-white transition-colors"
@@ -111,7 +111,7 @@ export default function ExamplesPage() {
                       <ChevronDown
                         className={cn(
                           "h-4 w-4 transition-transform",
-                          expandedIndex === index && "rotate-180"
+                          expandedIndex === item.title && "rotate-180"
                         )}
                       />
                       View Prompt
@@ -121,7 +121,7 @@ export default function ExamplesPage() {
 
                   {/* Expanded Content */}
                   <AnimatePresence>
-                    {expandedIndex === index && (
+                    {expandedIndex === item.title && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}

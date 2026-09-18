@@ -149,7 +149,7 @@ export function ChatInterface() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-4rem)] flex-col">
+    <div className="flex h-[calc(100vh-4rem)] flex-col pt-16">
       {/* Header */}
       <div className="flex-shrink-0 border-b border-white/10 bg-black/50 backdrop-blur-xl px-6 py-4">
         <div className="flex items-center gap-3">

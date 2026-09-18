@@ -84,8 +84,11 @@ export function Examples() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="border-t border-white/10 p-6">
-                        <pre className="text-xs text-white/70 font-mono whitespace-pre-wrap">
+                      <div className="border-t border-white/10 p-6 bg-black/30">
+                        <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-amber-400">
+                          Full Prompt
+                        </div>
+                        <pre className="text-xs text-white/70 font-mono whitespace-pre-wrap leading-relaxed">
                           {prompt.preview}
                         </pre>
                       </div>

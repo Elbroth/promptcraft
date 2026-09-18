@@ -158,12 +158,12 @@ export default function AboutPage() {
               >
                 {/* Connector */}
                 {index < phases.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-[calc(100%+1rem)] w-[calc(100%-2rem)] h-px bg-gradient-to-r from-amber-500/50 to-transparent" />
+                  <div className="hidden md:block absolute top-12 left-[calc(100%+0.5rem)] w-4 h-px bg-gradient-to-r from-amber-500/50 to-transparent" />
                 )}
 
                 <div className="relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-amber-500/30">
                   {/* Phase Badge */}
-                  <div className="absolute -top-3 -right-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-xs font-bold text-black">
+                  <div className="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-xs font-bold text-black">
                     {phase.phase}
                   </div>
 

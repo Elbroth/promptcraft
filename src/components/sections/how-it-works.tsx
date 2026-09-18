@@ -47,12 +47,12 @@ export function HowItWorks() {
             >
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[calc(100%+1rem)] w-[calc(100%-2rem)] h-px bg-gradient-to-r from-amber-500/50 to-transparent" />
+                <div className="hidden md:block absolute top-12 left-[calc(100%+0.5rem)] w-4 h-px bg-gradient-to-r from-amber-500/50 to-transparent" />
               )}
 
               <div className="relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-amber-500/30 hover:bg-white/10">
                 {/* Step Number */}
-                <div className="absolute -top-4 -right-4 text-6xl font-bold text-white/5">
+                <div className="absolute top-4 right-6 text-6xl font-bold text-white/5 pointer-events-none select-none">
                   {step.step}
                 </div>
 
