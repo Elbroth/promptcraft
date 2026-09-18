@@ -52,8 +52,8 @@ export function Pricing() {
                     <span className="text-4xl font-bold text-white">
                       {plan.price}
                     </span>
-                    {plan.period && (
-                      <span className="text-white/40">{plan.period}</span>
+                    {"period" in plan && plan.period && (
+                      <span className="text-white/40">{(plan as { period?: string }).period}</span>
                     )}
                   </div>
                   <p className="mt-2 text-sm text-white/60">
